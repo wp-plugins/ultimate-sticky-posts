@@ -3,11 +3,10 @@
 Plugin Name: Ultimate Sticky Posts Widget
 Description: Adds a widget that shows your posts the way you want.
 Author: Pieter Ferreira
-Version: 1.2
+Version: 1.2.1
 License: GPLv2
 */
 
-// Creating the widget 
 add_action( 'wp_enqueue_scripts', 'sticky_posts_widget_styles' );
 function sticky_posts_widget_styles() {
 	wp_register_style( 'sticky-posts', plugins_url( 'sticky-posts/sticky.css' ) );
@@ -18,11 +17,11 @@ class bsp_widget extends WP_Widget {
 
 function __construct() {
 parent::__construct(
-// Base ID of your widget
+// Base ID of the widget
 'bsp_widget', 
 
-// Widget name will appear in UI
-__('Sticky Posts Widget', 'bsp_widget_domain'), 
+// Widget name that appears in UI
+__('Ulitmate Sticky Posts Widget', 'bsp_widget_domain'), 
 
 // Widget description
 array( 'description' => __( 'Display your posts the way you want to!, sticky or not.', 'bsp_widget_domain' ), ) 
@@ -30,11 +29,9 @@ array( 'description' => __( 'Display your posts the way you want to!, sticky or 
 }
 
 // Creating widget front-end
-// This is where the action happens
 public function widget( $args, $instance ) {
 
 
-// before and after widget arguments are defined by themes
 echo $args['before_widget'];
 
 if ( ! empty( $title ) )
@@ -47,7 +44,7 @@ echo $args['before_title'] . $title . $args['after_title'];
     $orderby = $instance['orderby'];
     echo $before_widget;
 
-      // Sticky posts
+      // Ultimate Sticky posts Query
       
       if ($sticky == 'only') {
         $sticky_query = $args = array( 
@@ -253,8 +250,6 @@ $show_thumbnail = $instance['show_thumbnail'];
             show_thumbnail.click(function(){
               thumb_size_wrap.toggle('fast');
             });
-
-            // Show or hide custom template field
 
           });
 
