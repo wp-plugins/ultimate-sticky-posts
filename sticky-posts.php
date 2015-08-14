@@ -3,7 +3,7 @@
 Plugin Name: Ultimate Sticky Posts Widget
 Description: Adds a widget that shows your posts the way you want.
 Author: Pieter Ferreira
-Version: 1.0.1
+Version: 1.2
 License: GPLv2
 */
 
