@@ -32,7 +32,6 @@ array( 'description' => __( 'Display your posts the way you want to!, sticky or 
 public function widget( $args, $instance ) {
 
 
-echo $args['before_widget'];
 
 if ( ! empty( $title ) )
 echo $args['before_title'] . $title . $args['after_title'];
@@ -81,7 +80,7 @@ echo $args['before_title'] . $title . $args['after_title'];
 			<?php
 			if ( $title ) {
        		echo $before_title;
-        		echo "<h3>" . $title . "</h3>";
+        		echo "<h2>" . $title . "</h2>";
         	echo $after_title;
       		}
    				$featured = new WP_Query($args); 
