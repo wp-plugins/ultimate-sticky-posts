@@ -3,7 +3,7 @@
 Plugin Name: Ultimate Sticky Posts Widget
 Description: Adds a widget that shows your posts the way you want.
 Author: Pieter Ferreira
-Version: 1.2.1
+Version: 1.2.2
 License: GPLv2
 */
 
@@ -96,9 +96,7 @@ echo $args['before_title'] . $title . $args['after_title'];
 					</div>
 				<?php endif; ?>
 				<?php if ( isset( $instance['show_title'] ) ) : ?>
-					<div class="featured_bottom">
-						<div class="bsp_title"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
-					</div>
+					<div class="bsp_title"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></div>
 				<?php endif; ?>
 				
 				<?php if ( isset( $instance['show_excerpt'] ) ) : ?>
